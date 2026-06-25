@@ -239,13 +239,4 @@ mvn clean test
 
 ## Auteurs - groupe 2
 
-* **Ali Umar BABAR** [ali.babar@ulb.be](mailto:ali.babar@ulb.be)
-* **Chris BADI BUDU** [stephane.badi.budu@ulb.be](mailto:stephane.badi.budu@ulb.be)
-* **Hamza AMRANI HALHOUL** [hamza.amrani.halhoul@ulb.be](mailto:hamza.amrani.halhoul@ulb.be)
-* **Ibrahim LAACHERI** [ibrahim.laacheri@ulb.be](mailto:ibrahim.laacheri@ulb.be)
-* **Isaac BENKECHIDA** [isaac.benkechida@ulb.be](mailto:isaac.benkechida@ulb.be)
-* **Mamadou BARRY** [mamadou.barry5@ulb.be](mailto:mamadou.barry5@ulb.be)
-* **Marouane ANNAIM** [marouane.annaim@ulb.be](mailto:marouane.annaim@ulb.be)
-* **Mourad EL HADDAOUI** [mourad.el.haddaoui@ulb.be](mailto:mourad.el.haddaoui@ulb.be)
-* **Muneeb SHAFIQ UR REHMAN** [muneeb.shafiq.ur.rehman@ulb.be](mailto:muneeb.shafiq.ur.rehman@ulb.be)
-* **Taha ES-SAÂDOUNI** [taha.essaadouni@ulb.be](mailto:taha.essaadouni@ulb.be)
+Project réalisé dans le cadre du cours d'info-f307 à l'ULB en collaboration avec un groupe de 10 étudiants.
