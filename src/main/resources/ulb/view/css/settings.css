@@ -1,0 +1,115 @@
+/*
+   settings.css  —  styles for SettingsView
+*/
+
+.settings-root {
+    -fx-background-image: url('../../assets/png/backgrounds/menuTeamBackground.png');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.settings-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c2c2c;
+    -fx-background-color: linear-gradient(to bottom, #fff7cf, #f2d877);
+    -fx-padding: 14 38 14 38;
+    -fx-border-color: #3b2f1f;
+    -fx-border-width: 3;
+}
+
+.settings-panel {
+    -fx-background-color: rgba(255,248,228,0.92);
+    -fx-border-color: #2f3b54;
+    -fx-border-width: 4;
+    -fx-padding: 24 28 24 28;
+}
+
+.settings-section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f4f74;
+}
+
+.settings-section-title-in-game {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8a3f2f;
+}
+
+.settings-action-label {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c2c2c;
+}
+
+/* Key badge base */
+.key-arrow {
+    -fx-min-width: 140;
+    -fx-alignment: center;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #6d86a8, #4b6285);
+    -fx-border-color: #24364a;
+    -fx-border-width: 3;
+    -fx-padding: 10 14 10 14;
+}
+
+.key-enter {
+    -fx-min-width: 140;
+    -fx-alignment: center;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c2c2c;
+    -fx-background-color: linear-gradient(to bottom, #fff3b1, #e4c95c);
+    -fx-border-color: #8a6e1f;
+    -fx-border-width: 3;
+    -fx-padding: 10 14 10 14;
+}
+
+.key-esc {
+    -fx-min-width: 140;
+    -fx-alignment: center;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #d06b5e, #a34a40);
+    -fx-border-color: #6f2b23;
+    -fx-border-width: 3;
+    -fx-padding: 10 14 10 14;
+}
+
+.key-space {
+    -fx-min-width: 140;
+    -fx-alignment: center;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #7b6fc9, #5c4ca3);
+    -fx-border-color: #3f3476;
+    -fx-border-width: 3;
+    -fx-padding: 10 14 10 14;
+}
+
+.key-e {
+    -fx-min-width: 140;
+    -fx-alignment: center;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #5fa86d, #3f7d4d);
+    -fx-border-color: #244a2d;
+    -fx-border-width: 3;
+    -fx-padding: 10 14 10 14;
+}
+
+.btn-settings-back {
+    -fx-background-color: linear-gradient(to bottom, #6d86a8, #4b6285);
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-border-color: #24364a;
+    -fx-border-width: 3;
+}

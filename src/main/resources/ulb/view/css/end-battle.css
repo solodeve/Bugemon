@@ -1,0 +1,81 @@
+/*
+   end-battle.css  —  styles for EndBattleView
+*/
+
+.end-battle-root {
+    -fx-padding: 50;
+    -fx-background-image: url('../../assets/png/backgrounds/mainMenuBackground.png');
+    -fx-background-size: 100% 100%;
+}
+
+.end-battle-title {
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+.end-battle-content {
+    -fx-padding: 20;
+}
+
+.end-battle-result {
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.end-battle-winning-title {
+    -fx-text-fill: #12ba4dff;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.end-battle-bugemons-list {
+    -fx-border-color: #12ba4dff;
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.end-battle-unlocked-section {
+    -fx-border-color: #ffd166;
+    -fx-border-width: 2;
+    -fx-padding: 14;
+    -fx-background-color: rgba(0,0,0,0.28);
+}
+
+.end-battle-unlocked-title {
+    -fx-text-fill: #ffd166;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.result-victory {
+    -fx-text-fill: #4CAF50;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+.result-defeat {
+    -fx-text-fill: #f44336;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+.winning-bugemon-label {
+    -fx-text-fill: #12ba4dff;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+}
+
+.winning-bugemon-empty {
+    -fx-text-fill: #12ba4dff;
+    -fx-font-size: 14px;
+}
+
+.unlocked-bugemon-label {
+    -fx-text-fill: #ffd166;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 6;
+}

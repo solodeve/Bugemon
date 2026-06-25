@@ -1,0 +1,62 @@
+/*
+   global.css  —  shared styles used across all views
+*/
+
+/* ── Primary (green gradient) buttons ─────────────────────── */
+.btn-primary {
+    -fx-background-color: linear-gradient(#4CAF50, #12ba4dff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+.btn-primary-sm {
+    -fx-background-color: linear-gradient(#4CAF50, #12ba4dff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+/* ── Secondary (gray gradient) buttons ────────────────────── */
+.btn-secondary {
+    -fx-background-color: linear-gradient(#888, #555);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+.btn-secondary-sm {
+    -fx-background-color: linear-gradient(#888, #555);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+/* ── Status labels ─────────────────────────────────────────── */
+.status-default {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.status-error {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff5c5c;
+}
+
+.status-success {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4caf50;
+}
+
+/* ── Transparent scroll pane ───────────────────────────────── */
+.scroll-transparent {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}

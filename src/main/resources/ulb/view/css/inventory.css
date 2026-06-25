@@ -1,0 +1,55 @@
+/*
+   inventory.css  —  styles for InventoryView / InventorySelectionView
+*/
+
+.inventory-root {
+    -fx-padding: 16;
+    -fx-background-color: white;
+}
+
+.inventory-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.inventory-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.inventory-container {
+    -fx-padding: 4 8 4 8;
+    -fx-background-color: transparent;
+}
+
+.btn-inventory-back {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+}
+
+.inventory-sprite-box {
+    -fx-background-color: #fff4de;
+    -fx-background-radius: 14;
+    -fx-border-color: #2d2d2d;
+    -fx-border-radius: 14;
+    -fx-border-width: 2;
+}
+
+.inventory-item-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #2a2a2a;
+}
+
+.inventory-item-desc {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6b7280;
+}
+
+.inventory-item-qty {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #2a2a2a;
+}

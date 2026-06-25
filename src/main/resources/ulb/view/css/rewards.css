@@ -1,0 +1,116 @@
+/*
+   rewards.css  —  styles for RewardsView
+*/
+
+.rewards-root {
+    -fx-background-image: url('../../assets/png/backgrounds/menuTeamBackground.png');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.rewards-title {
+    -fx-background-color: #eadb9b;
+    -fx-border-color: #4a402c;
+    -fx-border-width: 4;
+    -fx-padding: 22 90 22 90;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252a35;
+}
+
+.rewards-content-panel {
+    -fx-background-color: rgba(248,245,230,0.88);
+    -fx-border-color: #38465f;
+    -fx-border-width: 4;
+    -fx-padding: 30;
+}
+
+.rewards-section-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #32527b;
+}
+
+.rewards-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.btn-rewards-back {
+    -fx-background-color: linear-gradient(to bottom, #748db5, #5a7399);
+    -fx-border-color: #31445f;
+    -fx-border-width: 4;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* ── Reward card elements (applied via Java) ──────────────── */
+.reward-card {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f8fbff);
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #d6dee8;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 14, 0.2, 0, 4);
+}
+
+.reward-level-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f4057;
+}
+
+.reward-name-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2d3d;
+}
+
+.reward-type-badge {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #1d4ed8;
+    -fx-background-radius: 20;
+    -fx-padding: 6 12 6 12;
+    -fx-font-weight: bold;
+}
+
+.reward-stats-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #475569;
+    -fx-line-spacing: 4px;
+}
+
+.reward-desc-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #334155;
+}
+
+.reward-effect-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f4057;
+}
+
+.reward-effect-label {
+    -fx-background-color: #eef2ff;
+    -fx-text-fill: #4338ca;
+    -fx-background-radius: 12;
+    -fx-padding: 8 12 8 12;
+    -fx-font-weight: bold;
+}
+
+/* ── Error card elements (applied via Java) ───────────────── */
+.reward-error-label {
+    -fx-text-fill: #b91c1c;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.reward-error-card {
+    -fx-background-color: #fff1f2;
+    -fx-background-radius: 16;
+    -fx-border-color: #fecdd3;
+    -fx-border-radius: 16;
+}

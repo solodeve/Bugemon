@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ulb.view.battle.party.PartySelectionView"
+            prefWidth="1280"
+            prefHeight="760"
+            styleClass="party-selection-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/party-selection.css"/>
+    </stylesheets>
+
+    <center>
+        <StackPane>
+            <padding>
+                <Insets top="28" right="34" bottom="28" left="34"/>
+            </padding>
+
+            <VBox maxWidth="1160"
+                  spacing="28"
+                  styleClass="party-main-card">
+                <padding>
+                    <Insets top="26" right="28" bottom="28" left="28"/>
+                </padding>
+
+                <HBox alignment="CENTER_LEFT" spacing="18">
+                    <VBox spacing="4">
+                        <Label text="Your Party"
+                               styleClass="party-title"/>
+                        <Label text="Choose the Bugemon that will take over during battle."
+                               styleClass="party-subtitle"/>
+                    </VBox>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <Button fx:id="btnBack"
+                            text="Back"
+                            onAction="#handleBack"
+                            prefWidth="150"
+                            prefHeight="46"
+                            styleClass="btn-party-back"/>
+                </HBox>
+
+                <HBox spacing="36" alignment="CENTER_LEFT">
+                    <VBox prefWidth="365" spacing="14">
+                        <Label text="Your actual Bugemon"
+                               styleClass="party-section-title"/>
+
+                        <StackPane prefWidth="365"
+                                   prefHeight="380"
+                                   styleClass="preview-card">
+                            <VBox alignment="CENTER" spacing="12">
+                                <Label fx:id="selectedBugemonStateBadge"
+                                       text="READY"
+                                       styleClass="badge-ready"/>
+
+                                <ImageView fx:id="selectedBugemonSprite"
+                                           fitWidth="230"
+                                           fitHeight="230"
+                                           preserveRatio="true"/>
+
+                                <Label fx:id="selectedBugemonName"
+                                       text="No Bugemon selected"
+                                       styleClass="bugemon-name-large"/>
+
+                                <Label fx:id="selectedBugemonElement"
+                                       text="Type"
+                                       styleClass="bugemon-element-label"/>
+                            </VBox>
+                        </StackPane>
+                    </VBox>
+
+                    <VBox spacing="14" HBox.hgrow="ALWAYS">
+                        <HBox spacing="12" alignment="CENTER_LEFT">
+                            <Button fx:id="statsTabButton"
+                                    text="Bugemon stats"
+                                    onAction="#handleShowStats"
+                                    prefHeight="42"
+                                    styleClass="tab-inactive"/>
+                            <Button fx:id="attacksTabButton"
+                                    text="Attacks"
+                                    onAction="#handleShowAttacks"
+                                    prefHeight="42"
+                                    styleClass="tab-inactive"/>
+                            <Button fx:id="specialTabButton"
+                                    text="Special"
+                                    onAction="#handleShowSpecial"
+                                    prefHeight="42"
+                                    styleClass="tab-inactive"/>
+                        </HBox>
+
+                        <StackPane prefHeight="380"
+                                   styleClass="detail-card">
+                            <VBox fx:id="selectedBugemonStatsPanel"
+                                  spacing="20">
+                                <padding>
+                                    <Insets top="24" right="26" bottom="24" left="26"/>
+                                </padding>
+
+                                <VBox spacing="10">
+                                    <Label text="HP"
+                                           styleClass="hp-section-title"/>
+
+                                    <HBox alignment="CENTER_LEFT" spacing="14">
+                                        <ProgressBar fx:id="selectedBugemonHpBar"
+                                                     progress="0.0"
+                                                     prefHeight="16"
+                                                     maxWidth="1.7976931348623157E308"
+                                                     HBox.hgrow="ALWAYS"
+                                                     style="-fx-accent: #2f6f4f;"/>
+
+                                        <Label fx:id="selectedBugemonHp"
+                                               text="0 / 0"
+                                               styleClass="hp-label"/>
+                                    </HBox>
+                                </VBox>
+
+                                <GridPane hgap="22" vgap="14">
+                                    <columnConstraints>
+                                        <ColumnConstraints minWidth="120"/>
+                                        <ColumnConstraints hgrow="ALWAYS"/>
+                                    </columnConstraints>
+
+                                    <Label text="Status"
+                                           styleClass="stats-label-key"
+                                           GridPane.columnIndex="0"
+                                           GridPane.rowIndex="0"/>
+                                    <Label fx:id="selectedBugemonStatus"
+                                           text="-"
+                                           styleClass="stats-label-value"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="0"/>
+
+                                    <Label text="Attack"
+                                           styleClass="stats-label-key"
+                                           GridPane.columnIndex="0"
+                                           GridPane.rowIndex="1"/>
+                                    <Label fx:id="selectedBugemonAttack"
+                                           text="-"
+                                           styleClass="stats-label-value"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="1"/>
+
+                                    <Label text="Defense"
+                                           styleClass="stats-label-key"
+                                           GridPane.columnIndex="0"
+                                           GridPane.rowIndex="2"/>
+                                    <Label fx:id="selectedBugemonDefense"
+                                           text="-"
+                                           styleClass="stats-label-value"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="2"/>
+
+                                    <Label text="Magic Attack"
+                                           styleClass="stats-label-key"
+                                           GridPane.columnIndex="0"
+                                           GridPane.rowIndex="3"/>
+                                    <Label fx:id="selectedBugemonMagicAttack"
+                                           text="-"
+                                           styleClass="stats-label-value"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="3"/>
+
+                                    <Label text="Magic Defense"
+                                           styleClass="stats-label-key"
+                                           GridPane.columnIndex="0"
+                                           GridPane.rowIndex="4"/>
+                                    <Label fx:id="selectedBugemonMagicDefense"
+                                           text="-"
+                                           styleClass="stats-label-value"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="4"/>
+
+                                    <Label text="Initiative"
+                                           styleClass="stats-label-key"
+                                           GridPane.columnIndex="0"
+                                           GridPane.rowIndex="5"/>
+                                    <Label fx:id="selectedBugemonInitiative"
+                                           text="-"
+                                           styleClass="stats-label-value"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="5"/>
+                                </GridPane>
+                            </VBox>
+
+                            <ScrollPane fx:id="selectedBugemonAttacksPane"
+                                        fitToWidth="true"
+                                        hbarPolicy="NEVER"
+                                        visible="false"
+                                        managed="false"
+                                        styleClass="attacks-scroll">
+                                <StackPane.margin>
+                                    <Insets top="5" right="5" bottom="5" left="5"/>
+                                </StackPane.margin>
+                                <content>
+                                    <VBox fx:id="selectedBugemonAttacksList" spacing="14">
+                                        <padding>
+                                            <Insets top="24" right="26" bottom="24" left="26"/>
+                                        </padding>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+
+                            <ScrollPane fx:id="selectedBugemonSpecialPane"
+                                        fitToWidth="true"
+                                        hbarPolicy="NEVER"
+                                        visible="false"
+                                        managed="false"
+                                        styleClass="attacks-scroll">
+                                <StackPane.margin>
+                                    <Insets top="5" right="5" bottom="5" left="5"/>
+                                </StackPane.margin>
+                                <content>
+                                    <VBox fx:id="selectedBugemonSpecialList" spacing="14">
+                                        <padding>
+                                            <Insets top="24" right="26" bottom="24" left="26"/>
+                                        </padding>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                        </StackPane>
+                    </VBox>
+                </HBox>
+
+                <VBox spacing="12">
+                    <Label text="Choose your Bugemon"
+                           styleClass="choose-title"/>
+
+                    <HBox fx:id="partyContainer"
+                          alignment="CENTER"
+                          spacing="18"
+                          fillHeight="false"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

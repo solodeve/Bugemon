@@ -1,0 +1,130 @@
+/*
+   no-view.css  —  styles for NOView (NO Tower)
+*/
+
+.no-view-root {
+    -fx-background-image: url('../../assets/png/backgrounds/gameBackground.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.no-view-content {
+    -fx-padding: 36;
+}
+
+.no-view-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.no-view-info-panel {
+    -fx-background-color: rgba(12,18,32,0.86);
+    -fx-background-radius: 22;
+    -fx-padding: 24;
+}
+
+.no-floor-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.no-progress-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d9e6ff;
+}
+
+.no-battle-progress-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #d9e6ff;
+}
+
+.no-status-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8ef0a7;
+}
+
+.no-unlocked-section {
+    -fx-border-color: #ffd166;
+    -fx-border-width: 2;
+    -fx-padding: 12;
+    -fx-background-color: rgba(255,209,102,0.10);
+}
+
+.no-unlocked-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd166;
+}
+
+.no-unlocked-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd166;
+}
+
+.btn-no-start {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-color: #ffd166;
+    -fx-text-fill: #1f1f1f;
+}
+
+.btn-no-quit {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-color: #ef476f;
+    -fx-text-fill: white;
+}
+
+/* ── Room card label variants (applied via Java) ──────────── */
+.room-card-type-label-boss {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd166;
+}
+
+.room-card-type-label-room {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d9e6ff;
+}
+
+.room-card-name-unlocked {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.room-card-name-locked {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8d99ae;
+}
+
+.room-card-name-unlocked-sm {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.room-card-state-current {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8ef0a7;
+}
+
+.room-card-state-unlocked {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d9e6ff;
+}
+
+.room-card-state-locked {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7f8c8d;
+}

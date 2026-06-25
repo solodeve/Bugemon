@@ -1,0 +1,3 @@
+INSERT INTO floor(numero)
+VALUES (?)
+ON CONFLICT (numero) DO NOTHING

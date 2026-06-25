@@ -1,0 +1,17 @@
+/*
+   main-menu.css  —  styles for MainMenuView
+*/
+
+.menu-panel {
+    -fx-padding: 50;
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(#5ec463, #14cc52);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 16, 0, 0, 8);
+}
+
+.btn-secondary:hover {
+    -fx-background-color: linear-gradient(#aaa, #777);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 16, 0, 0, 8);
+}

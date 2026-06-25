@@ -1,0 +1,95 @@
+/*
+   leaderboard.css  —  styles for LeaderBoardView
+*/
+
+.leaderboard-root {
+    -fx-background-image: url('../../assets/png/backgrounds/cave.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.leaderboard-header-box {
+    -fx-padding: 24 32 12 32;
+}
+
+.leaderboard-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0, 0, 255, 0.71);
+}
+
+.leaderboard-status {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.leaderboard-scroll {
+    -fx-background: transparent;
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+
+.leaderboard-entries {
+    -fx-padding: 0 32 0 32;
+}
+
+.leaderboard-bottom-bar {
+    -fx-padding: 16 32 24 32;
+}
+
+/* ── Entry rows (applied via Java) ────────────────────────── */
+.entry-row {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-border-color: #1f1f1f;
+    -fx-border-width: 2;
+    -fx-padding: 18 20 18 20;
+}
+
+.entry-row-focused {
+    -fx-border-color: #6aa9ff;
+    -fx-border-width: 3;
+    -fx-padding: 17 19 17 19;
+}
+
+.rank-1 {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-border-color: #f5c518;
+    -fx-border-width: 3;
+    -fx-padding: 17 19 17 19;
+}
+
+.rank-2 {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 3;
+    -fx-padding: 17 19 17 19;
+}
+
+.rank-3 {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-border-color: #cd7f32;
+    -fx-border-width: 3;
+    -fx-padding: 17 19 17 19;
+}
+
+/* ── Labels inside entry rows (applied via Java) ─────────── */
+.rank-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-min-width: 70px;
+}
+
+.name-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.score-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f80ed;
+    -fx-min-width: 90px;
+    -fx-alignment: center-right;
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane"
+           prefHeight="650.0" prefWidth="1000.0"
+           xmlns="http://javafx.com/javafx/23"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="ulb.view.battle.towerMode.NOView"
+           styleClass="no-view-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/no-view.css"/>
+    </stylesheets>
+
+    <children>
+        <VBox alignment="CENTER" spacing="22.0" maxWidth="900.0" prefWidth="900.0" styleClass="no-view-content">
+            <children>
+                <Label fx:id="titleLabel"
+                       text="NO Tower"
+                       styleClass="no-view-title"/>
+
+                <VBox spacing="14.0"
+                      maxWidth="860.0"
+                      prefWidth="860.0"
+                      styleClass="no-view-info-panel">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="18.0">
+                            <children>
+                                <Label text="Floor layout"
+                                       styleClass="no-floor-label"/>
+
+                                <Label fx:id="floorLabel"
+                                       text="Floor 1 / 9"
+                                       styleClass="no-progress-label"/>
+
+                                <Label fx:id="progressLabel"
+                                       text="Battle 1 / 4"
+                                       styleClass="no-battle-progress-label"/>
+                            </children>
+                        </HBox>
+
+                        <Label fx:id="statusLabel"
+                               wrapText="true"
+                               styleClass="no-status-label"/>
+
+                        <VBox fx:id="unlockedSection"
+                              spacing="8.0"
+                              visible="false"
+                              managed="false"
+                              styleClass="no-unlocked-section">
+                            <children>
+                                <Label text="You have unlocked :"
+                                       styleClass="no-unlocked-title"/>
+                                <VBox fx:id="unlockedBugemonsBox" spacing="5.0" />
+                            </children>
+                        </VBox>
+
+                        <FlowPane fx:id="roomsContainer"
+                                  hgap="18.0"
+                                  vgap="18.0"
+                                  prefWrapLength="760.0"
+                                  alignment="CENTER"
+                                  prefWidth="760.0" />
+                    </children>
+                </VBox>
+
+                <HBox alignment="CENTER" spacing="16.0">
+                    <children>
+                        <Button fx:id="startBattleButton"
+                                text="Start battle"
+                                onAction="#handleStartBattle"
+                                prefWidth="220.0"
+                                prefHeight="54.0"
+                                styleClass="btn-no-start"/>
+
+                        <Button fx:id="quitTowerButton"
+                                text="Quit tower"
+                                onAction="#handleQuitTower"
+                                prefWidth="220.0"
+                                prefHeight="54.0"
+                                styleClass="btn-no-quit"/>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</StackPane>

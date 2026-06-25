@@ -1,0 +1,77 @@
+/*
+   levelup.css  —  styles for LevelupView
+*/
+
+.levelup-root {
+    -fx-padding: 50;
+    -fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+
+.levelup-title {
+    -fx-text-fill: #FFD700;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.levelup-sprite {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.levelup-subtitle {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.levelup-center {
+    -fx-padding: 40;
+}
+
+.btn-bonus-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.btn-bonus-orange {
+    -fx-background-color: #FFA500;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.btn-bonus-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 20;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.levelup-stats-container {
+    -fx-padding: 20;
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 12;
+}
+
+.btn-levelup-confirm {
+    -fx-background-color: #FFD700;
+    -fx-text-fill: #1e3c72;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Applied dynamically by Java to stat labels */
+.levelup-stat-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}

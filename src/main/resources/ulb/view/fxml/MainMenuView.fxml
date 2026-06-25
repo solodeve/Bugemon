@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="ulb.view.menu.MainMenuView">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/main-menu.css"/>
+    </stylesheets>
+
+    <ImageView fx:id="bgImage" preserveRatio="false" mouseTransparent="true">
+        <image>
+            <Image url="@../../assets/png/backgrounds/mainMenuBackground.png"/>
+        </image>
+    </ImageView>
+
+    <!-- Panel 1 : main -->
+    <VBox fx:id="panelMain" alignment="CENTER" spacing="20" styleClass="menu-panel">
+
+        <ImageView fitWidth="500" fitHeight="400" preserveRatio="true">
+            <image>
+                <Image url="@../../assets/png/backgrounds/logo.png"/>
+            </image>
+        </ImageView>
+
+        <Button fx:id="btnGame"
+                text="GAME"
+                onAction="#handleGame"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-primary"/>
+
+        <Button fx:id="btnSettings"
+                text="SETTINGS"
+                onAction="#handleSettings"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-primary"/>
+
+        <Button fx:id="btnLeave"
+                text="LOG OUT"
+                onAction="#handleQuit"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-primary"/>
+    </VBox>
+
+    <!-- Panel 2 : game modes -->
+    <VBox fx:id="panelGame" alignment="CENTER" spacing="20" styleClass="menu-panel" visible="false" managed="false">
+
+        <ImageView fitWidth="500" fitHeight="400" preserveRatio="true">
+            <image>
+                <Image url="@../../assets/png/backgrounds/logo.png"/>
+            </image>
+        </ImageView>
+
+        <Button fx:id="btnFreeBattle"
+                text="FREE BATTLE"
+                onAction="#handleFreeBattle"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-primary"/>
+
+        <Button fx:id="btnNoTower"
+                text="NO TOWER"
+                onAction="#handleNoTower"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-primary"/>
+
+        <Button fx:id="btnLeaderboard"
+            text="LEADERBOARD"
+            onAction="#handleLeaderBoard"
+            prefWidth="450" prefHeight="60"
+            styleClass="btn-primary"/>
+
+        <Button fx:id="btnRewards"
+                text="REWARDS"
+                onAction="#handleRewards"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-primary"/>
+
+        <Button fx:id="btnBack"
+                text="BACK"
+                onAction="#handleBack"
+                prefWidth="450" prefHeight="60"
+                styleClass="btn-secondary"/>
+    </VBox>
+
+</StackPane>

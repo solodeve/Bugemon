@@ -1,0 +1,175 @@
+/*
+   battle.css  —  styles for BattleView (battle screen)
+*/
+
+/* Root pane — background set dynamically by Java */
+.battle-root {
+    -fx-background-image: url('../../assets/png/backgrounds/gameBackground.png');
+    -fx-background-size: 100% 100%;
+}
+
+.enemy-info-panel {
+    -fx-background-color: rgba(255,255,255,0.93);
+    -fx-background-radius: 18;
+    -fx-border-color: black;
+    -fx-border-radius: 18;
+    -fx-padding: 16;
+}
+
+.player-info-panel {
+    -fx-background-color: rgba(255,255,255,0.94);
+    -fx-background-radius: 18;
+    -fx-border-color: black;
+    -fx-border-radius: 18;
+    -fx-padding: 16;
+}
+
+.battle-name-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.battle-element-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.battle-hp-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.battle-xp-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #888888;
+}
+
+.battle-special-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7a1420;
+}
+
+.battle-message-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.animation-overlay {
+    -fx-background-color: transparent;
+}
+
+/* ── Main action buttons (colors applied via Java) ────────── */
+.action-btn {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Specific colors set via Java applyButtonColors() */
+.btn-battle-attack {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.btn-battle-team {
+    -fx-background-color: #2471a3;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.btn-battle-items {
+    -fx-background-color: #1e8449;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.btn-battle-giveup {
+    -fx-background-color: #922b21;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.btn-battle-return {
+    -fx-background-color: #616a6b;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* ── Skill buttons (element colors applied via Java) ──────── */
+.skill-btn {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-fire {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-ice {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-plant {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-mecha {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-light {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: #333;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-shadow {
+    -fx-background-color: #6c3483;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.skill-all {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* ── Special / Domain button ───────────────────────────────── */
+.special-button {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #ff8a3d, #c62828);
+    -fx-background-radius: 18;
+    -fx-border-color: #ffe082;
+    -fx-border-radius: 18;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(198,40,40,0.45), 14, 0.2, 0, 3);
+}

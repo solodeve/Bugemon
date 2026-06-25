@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.view.battle.EndBattleView"
+            styleClass="end-battle-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/end-battle.css"/>
+    </stylesheets>
+
+    <top>
+        <Label text="Battle finished"
+               styleClass="end-battle-title"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" styleClass="end-battle-content">
+            <Label fx:id="lblResult" text="Fight result"
+                   styleClass="end-battle-result"/>
+
+            <Separator style="-fx-border-color: white;"/>
+
+            <Label text="Winning Bugemons"
+                   styleClass="end-battle-winning-title"/>
+
+            <ScrollPane fitToWidth="true">
+                <VBox fx:id="vboxBugemons" spacing="10"
+                      styleClass="end-battle-bugemons-list"/>
+            </ScrollPane>
+
+            <VBox fx:id="unlockedSection"
+                  spacing="10"
+                  alignment="TOP_CENTER"
+                  visible="false"
+                  managed="false"
+                  styleClass="end-battle-unlocked-section">
+                <Label text="You have unlocked :"
+                       styleClass="end-battle-unlocked-title"/>
+                <VBox fx:id="vboxUnlockedBugemons" spacing="6" alignment="TOP_CENTER"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" HBox.hgrow="NEVER">
+            <Button fx:id="btnBack" text="Return to main menu" onAction="#handleBack"
+                    prefWidth="300" prefHeight="60"
+                    styleClass="btn-primary"/>
+        </HBox>
+    </bottom>
+</BorderPane>

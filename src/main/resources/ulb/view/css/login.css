@@ -1,0 +1,73 @@
+/*
+   login.css  —  styles for LoginView
+*/
+
+.login-root {
+    -fx-background-image: url('../../assets/png/backgrounds/mainMenuBackground.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+}
+
+.input-field {
+    -fx-background-radius: 10;
+    -fx-font-size: 16px;
+}
+
+/* Login button (green) */
+.btn-login {
+    -fx-background-color: linear-gradient(#4CAF50, #12ba4dff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+}
+
+.btn-login:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Register button (blue) */
+.btn-register {
+    -fx-background-color: linear-gradient(#3d7ac4, #2f66ab);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+}
+
+.btn-register:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Quit button (red) */
+.btn-quit {
+    -fx-background-color: linear-gradient(#922b21, #7a1f18);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+}
+
+.btn-quit:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Dynamic message label — base state (no color; set by Java) */
+.message-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* Applied by Java: showError() */
+.message-error {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd2d2;
+}
+
+/* Applied by Java: showSuccess() */
+.message-success {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c5f6c5;
+}

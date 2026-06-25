@@ -1,0 +1,78 @@
+/*
+   team-selection.css  —  styles for TeamSelectionView
+*/
+
+.team-selection-root {
+    -fx-background-image: url('../../assets/png/backgrounds/menuTeamBackground.png');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.team-selection-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0,0,0,0.30);
+    -fx-padding: 14 30 14 30;
+    -fx-border-color: rgba(255,255,255,0.55);
+    -fx-border-width: 2;
+}
+
+.teams-list-panel {
+    -fx-background-color: rgba(255,255,255,0.30);
+    -fx-border-color: #1f1f1f;
+    -fx-border-width: 2;
+    -fx-padding: 14 22 14 22;
+}
+
+.team-status-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* ── Team rows (applied dynamically via Java) ─────────────── */
+.team-row {
+    -fx-background-color: rgba(255,255,255,0.96);
+    -fx-border-color: #1f1f1f;
+    -fx-border-width: 2;
+    -fx-padding: 18 20 18 20;
+}
+
+.team-row-selected {
+    -fx-background-color: rgba(255,255,255,1.0);
+    -fx-border-color: #2f80ed;
+    -fx-border-width: 3;
+    -fx-padding: 17 19 17 19;
+}
+
+.team-row-focused {
+    -fx-background-color: rgba(255,255,255,1.0);
+    -fx-border-color: #6aa9ff;
+    -fx-border-width: 3;
+    -fx-padding: 17 19 17 19;
+}
+
+.add-row {
+    -fx-background-color: rgba(255,255,255,0.96);
+    -fx-border-color: #1f1f1f;
+    -fx-border-width: 2;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.add-row-focused {
+    -fx-background-color: rgba(255,255,255,1.0);
+    -fx-border-color: #2f80ed;
+    -fx-border-width: 3;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.team-name-field {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}

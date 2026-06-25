@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="rootPane"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.view.battle.towerMode.LevelupView"
+            styleClass="levelup-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/levelup.css"/>
+    </stylesheets>
+
+    <top>
+        <VBox alignment="CENTER" spacing="20">
+            <Label fx:id="levelupTitle" text="Bugemon reached level X !"
+                   styleClass="levelup-title"
+                   alignment="CENTER"/>
+
+            <ImageView fx:id="bugemonSprite" preserveRatio="true" fitWidth="200" fitHeight="200"
+                       styleClass="levelup-sprite"/>
+
+            <Label text="Choose a stat bonus"
+                   styleClass="levelup-subtitle"
+                   alignment="CENTER"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="25" styleClass="levelup-center">
+            <HBox spacing="30" alignment="CENTER">
+                <Button fx:id="bonus1Button" prefWidth="200" prefHeight="100"
+                        onAction="#onBonus1Selected"
+                        styleClass="btn-bonus-green"/>
+
+                <Button fx:id="bonus2Button" prefWidth="200" prefHeight="100"
+                        onAction="#onBonus2Selected"
+                        styleClass="btn-bonus-orange"/>
+
+                <Button fx:id="bonus3Button" prefWidth="200" prefHeight="100"
+                        onAction="#onBonus3Selected"
+                        styleClass="btn-bonus-blue"/>
+            </HBox>
+
+            <VBox fx:id="statsContainer"
+                  alignment="CENTER"
+                  spacing="10"
+                  styleClass="levelup-stats-container">
+            </VBox>
+            <Button fx:id="confirmButton"
+                    text="Valider"
+                    onAction="#onConfirmSelected"
+                    visible="false"
+                    managed="false"
+                    prefWidth="160"
+                    prefHeight="45"
+                    styleClass="btn-levelup-confirm"/>
+        </VBox>
+    </center>
+</BorderPane>

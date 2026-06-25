@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ulb.view.menu.LeaderboardView"
+            styleClass="leaderboard-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/leaderboard.css"/>
+    </stylesheets>
+
+    <top>
+        <VBox styleClass="leaderboard-header-box">
+            <HBox alignment="CENTER">
+                <Label text="Leaderboard"
+                       styleClass="leaderboard-title"/>
+            </HBox>
+            <Label fx:id="statusLabel"
+                   styleClass="leaderboard-status status-default"/>
+        </VBox>
+    </top>
+
+    <!-- Scrollable entry list -->
+    <center>
+        <ScrollPane fx:id="entriesScrollPane"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    styleClass="leaderboard-scroll"
+                    BorderPane.alignment="CENTER">
+            <VBox fx:id="entriesContainer" spacing="8"
+                  maxWidth="Infinity"
+                  styleClass="leaderboard-entries"/>
+        </ScrollPane>
+    </center>
+
+    <!-- Bottom action bar -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="12"
+              styleClass="leaderboard-bottom-bar">
+            <Button fx:id="btnBack" text="← Back"
+                    onAction="#handleBack"
+                    onKeyPressed="#handleBackKeyPressed"
+                    style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

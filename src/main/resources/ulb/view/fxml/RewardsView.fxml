@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<StackPane fx:id="rootPane"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="ulb.view.battle.towerMode.RewardsView"
+           prefWidth="1280"
+           prefHeight="760"
+           styleClass="rewards-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/rewards.css"/>
+    </stylesheets>
+
+    <BorderPane maxWidth="1280" maxHeight="760">
+
+        <top>
+            <StackPane alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets top="45" />
+                </BorderPane.margin>
+
+                <Label text="Rewards"
+                       styleClass="rewards-title"/>
+            </StackPane>
+        </top>
+
+        <center>
+            <StackPane alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets top="25" bottom="20" left="120" right="120"/>
+                </BorderPane.margin>
+
+                <VBox maxWidth="980"
+                    prefHeight="470"
+                    spacing="18"
+                    styleClass="rewards-content-panel">
+
+                    <Label text="Unlockable attacks by level"
+                        styleClass="rewards-section-title"/>
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="false"
+                                hbarPolicy="NEVER"
+                                vbarPolicy="AS_NEEDED"
+                                pannable="true"
+                                styleClass="rewards-scroll">
+                        <content>
+                            <GridPane fx:id="levelsContainer"
+                                    hgap="22"
+                                    vgap="22"
+                                    style="-fx-padding: 10;" />
+                        </content>
+                    </ScrollPane>
+                </VBox>
+            </StackPane>
+        </center>
+
+        <bottom>
+            <HBox alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets bottom="30"/>
+                </BorderPane.margin>
+
+                <Button fx:id="btnBack"
+                        text="Back"
+                        onAction="#handleBack"
+                        prefWidth="210"
+                        prefHeight="68"
+                        styleClass="btn-rewards-back"/>
+            </HBox>
+        </bottom>
+
+    </BorderPane>
+</StackPane>

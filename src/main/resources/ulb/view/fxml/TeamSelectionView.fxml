@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ulb.view.menu.teamSelection.TeamSelectionView"
+            prefWidth="1280"
+            prefHeight="760"
+            styleClass="team-selection-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/team-selection.css"/>
+    </stylesheets>
+
+    <top>
+        <Label text="Choose your team"
+               BorderPane.alignment="CENTER"
+               styleClass="team-selection-title">
+            <BorderPane.margin>
+                <Insets top="28" bottom="8"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20" left="70" right="70" top="12" />
+            </BorderPane.margin>
+
+            <VBox maxWidth="970"
+                  minHeight="0"
+                  spacing="16"
+                  VBox.vgrow="ALWAYS"
+                  styleClass="teams-list-panel">
+                <ScrollPane fx:id="teamsScrollPane"
+                            fitToWidth="true"
+                            hbarPolicy="NEVER"
+                            pannable="true"
+                            VBox.vgrow="ALWAYS"
+                            styleClass="scroll-transparent">
+                    <VBox fx:id="teamsContainer"
+                          minHeight="0"
+                          spacing="22"/>
+                </ScrollPane>
+            </VBox>
+
+            <Label fx:id="statusLabel"
+                   alignment="CENTER"
+                   maxWidth="970"
+                   styleClass="team-status-label status-default"
+                   textAlignment="CENTER"
+                   wrapText="true" />
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" maxWidth="970" spacing="18" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="30" left="70" right="70"/>
+            </BorderPane.margin>
+            <Button fx:id="btnBack" onAction="#handleBack" onKeyPressed="#handleBackKeyPressed" prefHeight="52" maxWidth="Infinity" HBox.hgrow="ALWAYS" minWidth="140" styleClass="btn-secondary-sm" text="Back" />
+            <Button fx:id="btnEditTeam" onAction="#handleEditTeam" onKeyPressed="#handleEditTeamKeyPressed" prefHeight="52" maxWidth="Infinity" HBox.hgrow="ALWAYS" minWidth="140" styleClass="btn-primary-sm" text="Edit Team" />
+            <Button fx:id="btnStartGame" onAction="#handleStartGame" onKeyPressed="#handleStartGameKeyPressed" prefHeight="52" maxWidth="Infinity" HBox.hgrow="ALWAYS" minWidth="140" styleClass="btn-primary-sm" text="Start Game" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

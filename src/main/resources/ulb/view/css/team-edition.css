@@ -1,0 +1,303 @@
+/*
+   team-edition.css  —  styles for TeamEditionView
+*/
+
+.team-edition-root {
+    -fx-background-image: url('../../assets/png/backgrounds/menuTeamBackground.png');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.team-edition-header {
+    -fx-background-color: rgba(255,255,255,0.45);
+}
+
+.team-edition-header-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.team-edition-header-name {
+    -fx-font-size: 16px;
+}
+
+.team-edition-panel {
+    -fx-background-color: rgba(255,255,255,0.65);
+    -fx-background-radius: 10;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+}
+
+.team-edition-label-bold {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.preview-pane {
+    -fx-background-color: rgba(255,255,255,0.72);
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.bugemon-selected-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.preview-sub-panel {
+    -fx-background-color: rgba(255,255,255,0.82);
+    -fx-border-color: black;
+    -fx-border-width: 4;
+}
+
+.stat-label-key {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.stat-label-value {
+    -fx-font-size: 14px;
+}
+
+.attack-description-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.attack-description-text {
+    -fx-font-size: 13px;
+}
+
+.attack-description-back {
+    -fx-font-size: 12px;
+}
+
+.team-slot-section-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2d3d;
+}
+
+.team-slot-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #666;
+    -fx-font-style: italic;
+}
+
+/* ── Team slot states (applied dynamically via Java) ──────── */
+.team-slot-base {
+    -fx-background-color: rgba(255,255,255,0.90);
+    -fx-border-color: black;
+    -fx-border-width: 3;
+}
+
+.team-slot-selected {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: #d62828;
+    -fx-border-width: 4;
+}
+
+.team-slot-focused {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: #6aa9ff;
+    -fx-border-width: 4;
+}
+
+/* ── Available card states (applied dynamically via Java) ─── */
+.available-card {
+    -fx-background-color: rgba(255,255,255,0.88);
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.available-card-selected {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: #2f80ed;
+    -fx-border-width: 4;
+}
+
+.available-card-focused {
+    -fx-background-color: rgba(255,255,255,0.92);
+    -fx-border-color: #6aa9ff;
+    -fx-border-width: 4;
+}
+
+.available-card-locked {
+    -fx-background-color: rgba(255,255,255,0.38);
+    -fx-border-color: rgba(0,0,0,0.45);
+    -fx-border-width: 2;
+}
+
+.available-card-locked-label {
+    -fx-text-fill: #666666;
+}
+
+.bugedex-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.bugedex-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #555;
+    -fx-font-style: italic;
+}
+
+.available-scroll {
+    -fx-background-color: rgba(255,255,255,0.72);
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.skill-button {
+    -fx-font-size: 13px;
+    -fx-padding: 10;
+}
+
+.no-skill-label {
+    -fx-font-size: 14px;
+}
+
+/* Tekken layout */
+.tekken-header {
+    -fx-background-color: rgba(20,20,20,0.82);
+}
+
+.tekken-header-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0e0e0;
+    -fx-letter-spacing: 2px;
+}
+
+.tekken-header-name {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ffd700;
+    -fx-font-weight: bold;
+}
+
+.tekken-main-panel {
+    -fx-background-color: transparent;
+}
+
+.tekken-left-panel {
+    -fx-background-color: rgba(20,20,20,0.90);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.tekken-center-panel {
+    -fx-background-color: rgba(20,20,20,0.90);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 3;
+}
+
+.tekken-right-panel {
+    -fx-background-color: rgba(20,20,20,0.90);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.tekken-section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+    -fx-letter-spacing: 1px;
+}
+
+.tekken-bugemon-name {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+    -fx-alignment: CENTER;
+}
+
+.tekken-stat-key {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0e0e0;
+}
+
+.tekken-stat-value {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff;
+}
+
+.tekken-separator {
+    -fx-background-color: #aaa;
+}
+
+.tekken-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.tekken-description-pane {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: #aaa;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.tekken-grid-section {
+    -fx-background-color: rgba(20,20,20,0.90);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.tekken-grid-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+    -fx-letter-spacing: 1px;
+}
+
+.tekken-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #aaa;
+    -fx-font-style: italic;
+}
+
+.tekken-status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #ff6b6b;
+    -fx-wrap-text: true;
+}
+
+.tekken-grid-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.tekken-grid-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.tekken-grid-scroll .content {
+    -fx-background-color: transparent;
+}
+
+.tekken-center-slot {
+    -fx-background-color: rgba(255,215,0,0.18);
+    -fx-border-color: #ffd700;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+}
+
+.tekken-center-slot-focused {
+    -fx-background-color: rgba(255,215,0,0.32);
+    -fx-border-color: #ffffff;
+    -fx-border-width: 4;
+    -fx-cursor: hand;
+}
+
+.tekken-center-slot-label {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+}

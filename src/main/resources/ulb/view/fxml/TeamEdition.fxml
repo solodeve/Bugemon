@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ulb.view.menu.teamEdition.TeamEditionView"
+            styleClass="team-edition-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/team-edition.css"/>
+    </stylesheets>
+
+    <top>
+        <StackPane styleClass="tekken-header" minHeight="42">
+            <padding><Insets top="10" right="16" bottom="10" left="16"/></padding>
+            <Label fx:id="teamNameLabel" text="EDIT TEAM"
+                   alignment="CENTER" maxWidth="1.7976931348623157E308"
+                   styleClass="tekken-header-name" StackPane.alignment="CENTER"/>
+            <Button fx:id="backButton" text="BACK" onAction="#onBack"
+                    styleClass="btn-secondary-sm" StackPane.alignment="CENTER_RIGHT"/>
+        </StackPane>
+    </top>
+
+    <center>
+        <VBox styleClass="tekken-main-panel" maxWidth="1400" maxHeight="900" style="-fx-background-color: rgba(20,20,20,0.90);">
+
+            <!-- ── Upper section: team slots | sprite | stats+skills ── -->
+            <HBox spacing="0" VBox.vgrow="ALWAYS" prefHeight="400">
+
+                <!-- LEFT: team slots 2×3 -->
+                <VBox spacing="10" alignment="TOP_CENTER" styleClass="tekken-left-panel" HBox.hgrow="ALWAYS" prefWidth="530" style="-fx-background-color: rgba(20,20,20,0.90);">
+                    <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+
+                    <Label fx:id="teamSlotLabel" text="YOUR TEAM" styleClass="tekken-section-title"/>
+
+                    <GridPane hgap="10" vgap="10" alignment="CENTER">
+                        <StackPane fx:id="slotPane1" prefWidth="100" prefHeight="100" styleClass="team-slot-base"
+                                   GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <ImageView fx:id="slotImage1" fitWidth="88" fitHeight="88" preserveRatio="true"/>
+                        </StackPane>
+                        <StackPane fx:id="slotPane2" prefWidth="100" prefHeight="100" styleClass="team-slot-base"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <ImageView fx:id="slotImage2" fitWidth="88" fitHeight="88" preserveRatio="true"/>
+                        </StackPane>
+                        <StackPane fx:id="slotPane3" prefWidth="100" prefHeight="100" styleClass="team-slot-base"
+                                   GridPane.columnIndex="2" GridPane.rowIndex="0">
+                            <ImageView fx:id="slotImage3" fitWidth="88" fitHeight="88" preserveRatio="true"/>
+                        </StackPane>
+                        <StackPane fx:id="slotPane4" prefWidth="100" prefHeight="100" styleClass="team-slot-base"
+                                   GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <ImageView fx:id="slotImage4" fitWidth="88" fitHeight="88" preserveRatio="true"/>
+                        </StackPane>
+                        <StackPane fx:id="slotPane5" prefWidth="100" prefHeight="100" styleClass="team-slot-base"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <ImageView fx:id="slotImage5" fitWidth="88" fitHeight="88" preserveRatio="true"/>
+                        </StackPane>
+                        <StackPane fx:id="slotPane6" prefWidth="100" prefHeight="100" styleClass="team-slot-base"
+                                   GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <ImageView fx:id="slotImage6" fitWidth="88" fitHeight="88" preserveRatio="true"/>
+                        </StackPane>
+                    </GridPane>
+
+                    <Label text="Double-click or Enter×2 to remove" styleClass="tekken-hint" wrapText="true"/>
+                    <Label fx:id="statusLabel" wrapText="true" styleClass="tekken-status-label"/>
+                </VBox>
+
+                <!-- CENTER: fixed width, panels left/right grow to fill remaining space -->
+                <StackPane prefWidth="340" minWidth="340" maxWidth="340"
+                           styleClass="tekken-center-panel">
+                    <VBox alignment="CENTER" spacing="10">
+                        <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+                        <Label fx:id="selectedBugemonName" text="SELECT A BUGEMON"
+                               alignment="CENTER" maxWidth="1.7976931348623157E308"
+                               styleClass="tekken-bugemon-name"/>
+                        <StackPane VBox.vgrow="ALWAYS" alignment="CENTER">
+                            <ImageView fx:id="selectedBugemonImage"
+                                       fitWidth="280" fitHeight="280" preserveRatio="true"/>
+                        </StackPane>
+                    </VBox>
+                </StackPane>
+
+                <!-- RIGHT: stats | attacks (side by side) -->
+                <HBox spacing="0" styleClass="tekken-right-panel" HBox.hgrow="ALWAYS" prefWidth="530" prefHeight="0" maxHeight="1.7976931348623157E308" style="-fx-background-color: rgba(20,20,20,0.90);">
+
+                    <!-- Stats sub-panel -->
+                    <VBox spacing="8" HBox.hgrow="ALWAYS" maxHeight="1.7976931348623157E308">
+                        <padding><Insets top="16" right="12" bottom="14" left="14"/></padding>
+                        <Label text="BUGEMON INFO" styleClass="tekken-section-title"/>
+                        <GridPane hgap="10" vgap="5">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="LEFT" minWidth="120" hgrow="ALWAYS"/>
+                                <ColumnConstraints halignment="RIGHT" minWidth="55"/>
+                            </columnConstraints>
+                            <Label text="Type" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                            <Label fx:id="selectedBugemonType" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                            <Label text="HP" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                            <Label fx:id="selectedBugemonHp" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <Label fx:id="selectedBugemonDomainExpansionTitle" text="Domain" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                            <Label fx:id="selectedBugemonDomainExpansion" text="" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                            <Label fx:id="selectedBugemonTransformationTitle" text="Transformation" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                            <Label fx:id="selectedBugemonTransformation" text="" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <Label text="Attack" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                            <Label fx:id="selectedBugemonAttack" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                            <Label text="Defense" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                            <Label fx:id="selectedBugemonDefense" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                            <Label text="Mag.Atk" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                            <Label fx:id="selectedBugemonMagicAttack" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                            <Label text="Mag.Def" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                            <Label fx:id="selectedBugemonMagicDefense" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                            <Label text="Initiative" styleClass="tekken-stat-key" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                            <Label fx:id="selectedBugemonInitiative" text="-" styleClass="tekken-stat-value" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+                        </GridPane>
+                    </VBox>
+
+                    <Region prefWidth="1" minWidth="1" maxWidth="1" maxHeight="1.7976931348623157E308" style="-fx-background-color: #666;"/>
+
+                    <!-- Attacks sub-panel -->
+                    <VBox spacing="8" HBox.hgrow="ALWAYS" maxHeight="1.7976931348623157E308">
+                        <padding><Insets top="16" right="14" bottom="14" left="12"/></padding>
+                        <Label text="ATTACKS" styleClass="tekken-section-title"/>
+                        <StackPane VBox.vgrow="ALWAYS" minHeight="0" prefHeight="0">
+                            <ScrollPane fx:id="attacksScrollPane" fitToWidth="true" hbarPolicy="NEVER"
+                                        pannable="true" styleClass="tekken-scroll">
+                                <VBox fx:id="selectedBugemonSkillsContainer" spacing="8"/>
+                            </ScrollPane>
+                            <VBox fx:id="attacksDescriptionPane" spacing="8" visible="false" managed="false"
+                                  styleClass="tekken-description-pane">
+                                <padding><Insets top="8" right="8" bottom="8" left="8"/></padding>
+                                <Label fx:id="attacksDescriptionTitle" wrapText="true" styleClass="attack-description-title"/>
+                                <Label fx:id="attacksDescriptionText" wrapText="true" VBox.vgrow="ALWAYS" styleClass="attack-description-text"/>
+                                <Button fx:id="attacksDescriptionBackButton" text="Back" onAction="#onSkillDescriptionBack" styleClass="attack-description-back"/>
+                            </VBox>
+                        </StackPane>
+                    </VBox>
+                </HBox>
+            </HBox>
+
+            <!-- ── Bottom: bugedex grid ── -->
+            <VBox styleClass="tekken-grid-section" VBox.vgrow="ALWAYS" style="-fx-background-color: rgba(20,20,20,0.90);">
+                <padding><Insets top="8" right="14" bottom="10" left="14"/></padding>
+
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <Label text="BUGEDEX" styleClass="tekken-grid-title"/>
+                    <Label text="Double-click or Enter×2 to add" styleClass="tekken-hint"/>
+                </HBox>
+
+                <ScrollPane fx:id="availableBugemonsScrollPane"
+                            vbarPolicy="NEVER" hbarPolicy="NEVER"
+                            pannable="false"
+                            VBox.vgrow="ALWAYS"
+                            styleClass="tekken-grid-scroll">
+                    <FlowPane fx:id="availableBugemonsContainer"
+                              hgap="10" vgap="8"
+                              orientation="VERTICAL"
+                              prefWrapLength="507">
+                        <padding><Insets top="6" right="0" bottom="0" left="0"/></padding>
+                    </FlowPane>
+                </ScrollPane>
+            </VBox>
+
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="ulb.view.battle.inventory.InventorySelectionView" xmlns:fx="http://javafx.com/fxml" spacing="12" styleClass="inventory-root">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/inventory.css"/>
+    </stylesheets>
+
+    <Label text="Select an item from the inventory" styleClass="inventory-title"/>
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="inventory-scroll">
+        <VBox fx:id="inventoryContainer" spacing="10" styleClass="inventory-container"/>
+    </ScrollPane>
+    <Button fx:id="btnBack" text="Back" onAction="#handleBack" styleClass="btn-inventory-back"/>
+</VBox>
